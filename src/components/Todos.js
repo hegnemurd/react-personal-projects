@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodos } from "../redux/reducer";
+import { GoPlus } from "react-icons/go";
 
 const mapStateToProps = (state) => {
   return {
@@ -19,6 +20,10 @@ const Todos = (props) => {
 
   const [todo, setTodo] = useState("");
 
+  const handleChange = (e) => {
+    setTodo(e.target.value);
+  };
+
   const add = () => {
     if (todo === "") {
       alert("Input is Empty");
@@ -32,10 +37,6 @@ const Todos = (props) => {
     }
   };
 
-  const handleChange = (e) => {
-    setTodo(e.target.value);
-  };
-
   return (
     <div className="addTodos">
       <input
@@ -46,7 +47,7 @@ const Todos = (props) => {
       />
 
       <button className="add-btn" onClick={() => add()}>
-        Add
+        <GoPlus />
       </button>
       <br />
     </div>
