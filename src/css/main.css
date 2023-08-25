@@ -12,7 +12,11 @@ html {
 }
 
 body {
-  background: linear-gradient(190deg, #867bcd 0%, #6a5aab 100%);
+  background: linear-gradient(
+    190deg,
+    rgb(134, 123, 205) 0%,
+    rgb(106, 90, 171) 100%
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -75,33 +79,33 @@ body {
   outline: none;
 }
 
-.displayTodos {
+.displaytodos {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.displayTodos .buttons {
+.displaytodos .buttons {
   margin-bottom: 2rem;
 }
 
-.displayTodos .buttons button {
+.displaytodos .buttons button {
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
   cursor: pointer;
   border: none;
 }
 
-.displayTodos .buttons button :focus {
+.displaytodos .buttons button:focus {
   outline: none;
 }
 
-.displayTodos .buttons button :not(:last-child) {
+.displaytodos .buttons button:not(:last-child) {
   margin-right: 1rem;
 }
 
-.displayTodos ul {
+.displaytodos ul {
   list-style: none;
   display: flex;
   align-self: flex-start;
@@ -173,12 +177,12 @@ body {
 }
 
 @media Screen and (max-width: 640px) {
-  .displayTodos {
+  .displaytodos {
     overflow: hidden;
     margin-top: 2rem;
   }
 
-  .displayTodos ul {
+  .displaytodos ul {
     display: flex;
     flex-direction: column;
     align-items: center;
